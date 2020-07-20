@@ -1,9 +1,13 @@
 package Inheritance;
 
+import java.util.List;
+
 public class InheritanceMain {
     public static void main(String[] args) {
 
-        Truck truck= new Truck("Volvo","VNL 300",EngineType.PETROL,300,500,10000);
+        Engine truckEngine=new Engine(6,EngineType.DIESEL,900);//We are creating
+        // object of Engine so we can use everything from class Engine => from Piston too.
+        Truck truck= new Truck("Volvo","VNL 300",truckEngine,300,500,10000);
         truck.start();
         truck.accelerate(40);
         truck.stop();
@@ -18,11 +22,17 @@ public class InheritanceMain {
         car.charge();
         System.out.println("\n");
 
-        Bus bus=new Bus("Mercedes","Sprinter",EngineType.DIESEL,50,120,45);
+        Engine busEngine =new Engine(3.5,EngineType.DIESEL,150);//We are creating
+        // object of Engine so we can use everything from class Engine => from Piston too.
+        Bus bus=new Bus("Mercedes","Sprinter",busEngine,50,120,45);
         bus.fuelUp(30);
         bus.pickUpPassengers(25);
         bus.start();
         bus.releasePassengers();
+        Engine engine=bus.getEngine();
+        System.out.println(engine.getEngineType());
+        List<Piston> pistons= engine.getPistons();
+        System.out.println(pistons);
 
 
     }

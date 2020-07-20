@@ -4,8 +4,8 @@ public class Truck extends FuelAuto {
 
     private  int cargoWeight;
 
-    public Truck(String producer, String model, EngineType engintype, int availablePetrol, int tankVolume, int cargoWeight) {
-        super(producer, model, engintype, availablePetrol, tankVolume);
+    public Truck(String producer, String model, Engine engin, int availablePetrol, int tankVolume, int cargoWeight) {
+        super(producer, model, engin, availablePetrol, tankVolume);
         this.cargoWeight = cargoWeight;
         System.out.println("Constructing a truck");
     }

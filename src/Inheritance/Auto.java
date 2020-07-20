@@ -3,14 +3,16 @@ package Inheritance;
 public class Auto {
     private String producer;
     private String model;
-    private EngineType engintype;
+    private Engine engine;//It's a Composition , cause we can use everything
+    // from class Engine(by creating object of Engine) without inheriting it.
+    // => we get access to class Piston.
     private int currentSpeed;
     protected boolean isRunning;//So bus passengers will exit when bus is stopped
 
-    public Auto(String producer, String model, EngineType engintype) {
+    public Auto(String producer, String model, Engine engine) {
         this.producer = producer;
         this.model = model;
-        this.engintype = engintype;
+        this.engine = engine;
         System.out.println("Auto was initialized");
     }
 
@@ -49,12 +51,12 @@ public class Auto {
         this.model = model;
     }
 
-    public EngineType getEngintype() {
-        return engintype;
+    public Engine getEngine() {
+        return engine;
     }
 
-    public void setEngintype(EngineType engintype) {
-        this.engintype = engintype;
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     public int getCurrentSpeed() {
