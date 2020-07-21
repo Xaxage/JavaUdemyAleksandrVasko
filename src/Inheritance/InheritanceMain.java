@@ -42,7 +42,7 @@ public class InheritanceMain {
         Auto bus=new Bus("Mercedes","Sprinter",busEngine,50,120,45);
         Auto truck= new Truck("Volvo","VNL 300",truckEngine,300,500,10000);
         Auto car=new ElectricCar("Tesla","Supertruck",78000,5);
-        Auto auto = new Auto("WV","Polo",busEngine );
+       //Auto auto = new Auto("WV","Polo",busEngine );
         //We can change types because Bus,Truck and ElectricCar are instances of class "Auto".
         //We can use only fields inside class "Auto" .For example we can't use method fuelUp
         //inside class "Bus", because its object declared as "Auto".
@@ -51,7 +51,7 @@ public class InheritanceMain {
         runCar(bus);
         runCar(truck);
         runCar(car);
-        runCar(auto);
+        //runCar(auto);
 
     }
 
@@ -59,6 +59,7 @@ public class InheritanceMain {
     auto.start();
     auto.stop();
     //auto.fuelUp();//We can't call cause it isn't initialized in class "Auto".
+    /*
     if(auto instanceof  Truck || auto instanceof  Bus){//checking if they are connected by inheritance
         //FuelAuto fAuto=auto;//We got error cause we have incompatible types :
         // "FuelAuto" and "Auto"
@@ -66,8 +67,10 @@ public class InheritanceMain {
         // Which means we are refactoring its type to "FuelAuto".
         // After that we can call method fuelAuto.
         fAuto.fuelUp(50);
-
+    */ // we can delete this check cause now it will be automatically determined due
+        //to abstract class "FuelAuto".
+        auto.energize();
     }
     }
 
-}
+

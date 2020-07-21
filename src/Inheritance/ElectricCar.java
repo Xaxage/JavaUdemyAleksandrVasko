@@ -11,6 +11,11 @@ public class ElectricCar extends Auto{
     }
 
     @Override
+    public void energize() {
+        charge();
+    }
+
+    @Override
     public void start() {
         isRunning=true;
         setCurrentSpeed(10);
@@ -25,7 +30,7 @@ public class ElectricCar extends Auto{
     }
 
 
-    public void charge(){
+    private void charge(){
         System.out.println("Battery is charging");
     }
 

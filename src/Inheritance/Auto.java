@@ -1,6 +1,6 @@
 package Inheritance;
 
-public class Auto {
+public abstract class Auto {
     private String producer;
     private String model;
     private Engine engine;//It's a Composition , cause we can use everything
@@ -15,6 +15,9 @@ public class Auto {
         this.engine = engine;
         System.out.println("Auto was initialized");
     }
+
+    public abstract void energize();//All abstract methods must be implemented in son-classes.
+
 
     public void start(){
         isRunning=true;

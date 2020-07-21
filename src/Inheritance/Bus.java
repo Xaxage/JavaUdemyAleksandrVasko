@@ -22,7 +22,13 @@ public class Bus extends FuelAuto {
         if(volume>getTankVolume()){
             setAvailablePetrolNow(getTankVolume());
         }
-        System.out.println("It is from Overrided method. ");
+        System.out.println("Adding diesel . ");
+    }
+
+    @Override
+    public void energize() {//We are doing it because our Parent class is abstract
+        // and energize is abstract method.
+    fuelUp(getTankVolume()-getAvailablePetrolNow());
     }
 
     @Override
