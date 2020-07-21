@@ -4,10 +4,10 @@ public class Bus extends FuelAuto {
 
     private int passengerNumber;
 
-    public Bus(String producer, String model, Engine engin, int availablePetrol, int tankVolume, int passengerNumber) {
-        super(producer, model, engin, availablePetrol, tankVolume);
+    public Bus(String producer, String model, Engine engine, int availablePetrol, int tankVolume, int passengerNumber) {
+        super(producer, model, engine, availablePetrol, tankVolume);
         this.passengerNumber = passengerNumber;
-        System.out.println("Bus was initialized");
+        System.out.println("Bus was initialized.");
     }
 
     public void fuelUp(){
@@ -22,7 +22,21 @@ public class Bus extends FuelAuto {
         if(volume>getTankVolume()){
             setAvailablePetrolNow(getTankVolume());
         }
-        System.out.println("It is from Overrided method ");
+        System.out.println("It is from Overrided method. ");
+    }
+
+    @Override
+    public void start() {
+        isRunning=true;
+        setCurrentSpeed(10);
+        System.out.println("Bus is starting. ");
+    }
+
+    @Override
+    public void stop() {
+        isRunning=false;
+        setCurrentSpeed(0);
+        System.out.println("Our bus has stopped. ");
     }
 
     public void releasePassengers(){

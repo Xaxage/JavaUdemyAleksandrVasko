@@ -17,7 +17,7 @@ public class Engine {
         for(int i=1;i<=5;i++) {//we are initializing 5 elements of piston
             // and save them in collection(List).
             this.pistons.add(new Piston(0.3, i));//We are adding parameters
-            // to each elements of the list
+            // to each elements of the list."new" means creating object.
         }
     }
 
