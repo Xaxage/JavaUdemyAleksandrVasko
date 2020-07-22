@@ -1,4 +1,4 @@
-package Inheritance;
+package InheritanceCompositionPolymorphismAbstract;
 
 public abstract class FuelAuto extends Auto{
     private int availablePetrolNow;

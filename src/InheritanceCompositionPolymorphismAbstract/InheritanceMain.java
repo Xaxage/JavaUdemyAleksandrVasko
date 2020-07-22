@@ -1,6 +1,4 @@
-package Inheritance;
-
-import java.util.List;
+package InheritanceCompositionPolymorphismAbstract;
 
 public class InheritanceMain {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Inheritance;
+package InheritanceCompositionPolymorphismAbstract;
 
 import java.util.ArrayList;
 import java.util.List;

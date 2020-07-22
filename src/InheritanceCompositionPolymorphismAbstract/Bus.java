@@ -1,4 +1,4 @@
-package Inheritance;
+package InheritanceCompositionPolymorphismAbstract;
 
 public class Bus extends FuelAuto {
 

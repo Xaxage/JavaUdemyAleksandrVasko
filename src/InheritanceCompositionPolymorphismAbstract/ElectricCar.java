@@ -1,4 +1,4 @@
-package Inheritance;
+package InheritanceCompositionPolymorphismAbstract;
 
 public class ElectricCar extends Auto{
     private int batteryVolume;

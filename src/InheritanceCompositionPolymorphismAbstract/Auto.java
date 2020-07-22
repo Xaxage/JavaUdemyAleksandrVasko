@@ -1,4 +1,4 @@
-package Inheritance;
+package InheritanceCompositionPolymorphismAbstract;
 
 public abstract class Auto {
     private String producer;
