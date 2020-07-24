@@ -20,7 +20,7 @@ public class ExceptionHandlingMain {
                 //System.out.println(divide(numerator, denominator));//we can get error here,so we "try" them
                 writer= new PrintWriter(new FileWriter("out.txt"));//creating new file
                 writer.println("Result =" + divide(numerator, denominator));
-                writer.close();/*It is essential cause after working with resources
+                /*writer.close();//It is essential cause after working with resources
                 this method will close and save it in "out.txt".I think here we can
                 delete this field cause anyway block "finally" will be done.*/
                 /*saveToFile(divide(numerator, denominator));/*We have to add "catch" block
@@ -38,9 +38,13 @@ public class ExceptionHandlingMain {
                 System.out.println("Unable to open file");
                 e.printStackTrace();//This field shows us or other devs where we got a problem.
             }finally {//In case we get an exception and we cant call our write.close().
-              //In finally it will be done anyway.
+                //In finally it will be done anyway.
                 System.out.println("Finally block was called.");
-                writer.close();
+                if (writer != null) {/*If in our "try" block we get an exception , before
+                    creating our "writer",Java won't create "writer" and in "finally" we
+                    get "NullPointerException".*/
+                    writer.close();
+                }
             }
         }while(continueLoop);
         System.out.println("Try catch block finished.");
