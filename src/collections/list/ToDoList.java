@@ -55,7 +55,7 @@ private LinkedList<String> toDoList=new LinkedList<>();
 
     public void removeTask(String task){
         toDoList.remove(task);//Here remove works by finding object.
-        // We can use remove by finding index.
+        // We can also use remove by finding index.
     }
 
     public int getTaskPriority(String task){//We want to know task's index
